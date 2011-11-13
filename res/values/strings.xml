@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StarField</string>
+    <string name="description">A star field, covering the night sky.</string>
+    <string name="settings">Settings</string>
+    <string name="starfield_settings_field_size">Field size</string>
+    <string name="starfield_settings_field_size_summary">Select the field size. A larger field will consume more memory.</string>
+    <string name="starfield_settings_field_ammount">Number of stars</string>
+    <string name="starfield_settings_field_ammount_summary">Select the number of stars. More stars consume more memory.</string>
+    <string name="starfield_settings_field_direction">Field direction</string>
+    <string name="starfield_settings_field_direction_summary">Select the direction: Left, right, or random.</string>
+</resources>

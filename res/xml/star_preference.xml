@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/settings"
+	android:key="starfieldwallpaper_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<ListPreference android:key="starfield_settings_field"
+		android:title="@string/starfield_settings_field_size" 
+		android:summary="@string/starfield_settings_field_size_summary"
+		android:entries="@array/field_sizes" 
+		android:entryValues="@array/field_sizes"
+		android:defaultValue="Normal"
+	 />
+	<ListPreference android:key="starfield_settings_ammount"
+		android:title="@string/starfield_settings_field_ammount" 
+		android:summary="@string/starfield_settings_field_ammount_summary"
+		android:entries="@array/field_ammount" 
+		android:entryValues="@array/field_ammount"
+		android:defaultValue="Normal"
+	 />
+	<ListPreference android:key="starfield_settings_direction"
+		android:title="@string/starfield_settings_field_direction" 
+		android:summary="@string/starfield_settings_field_direction_summary"
+		android:entries="@array/field_directions" 
+		android:entryValues="@array/field_directions"
+		android:defaultValue="Right"
+	 />
+</PreferenceScreen>
+
+

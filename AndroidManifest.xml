@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="5" android:versionName="1.4" package="se.bes.starfield2">
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<service android:label="@string/app_name" android:permission="android.permission.BIND_WALLPAPER"
+			android:name="StarField">
+			<intent-filter>
+				<action android:name="android.service.wallpaper.WallpaperService" />
+			</intent-filter>
+			<meta-data android:name="android.service.wallpaper"
+				android:resource="@xml/star" />
+		</service>
+		<activity android:label="@string/settings"
+			android:name="se.bes.starfield2.StarFieldSettings" android:theme="@android:style/Theme.Black"
+			android:exported="true">
+		</activity>
+
+	</application>
+
+	<uses-sdk android:minSdkVersion="7" />
+	<uses-feature android:name="android.software.live_wallpaper" />
+</manifest>
