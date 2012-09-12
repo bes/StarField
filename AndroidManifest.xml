@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	android:versionCode="5" android:versionName="1.4" package="se.bes.starfield2">
+	package="se.bes.starfield2"
+	android:versionCode="6"
+	android:versionName="1.4.1" >
 
-	<application android:icon="@drawable/icon" android:label="@string/app_name">
-		<service android:label="@string/app_name" android:permission="android.permission.BIND_WALLPAPER"
-			android:name="StarField">
+	<uses-feature android:name="android.software.live_wallpaper" />
+
+	<uses-sdk
+		android:minSdkVersion="7"
+		android:targetSdkVersion="14" />
+
+	<application
+		android:icon="@drawable/icon"
+		android:label="@string/app_name" >
+		<service
+			android:name="StarField"
+			android:label="@string/app_name"
+			android:permission="android.permission.BIND_WALLPAPER" >
 			<intent-filter>
 				<action android:name="android.service.wallpaper.WallpaperService" />
 			</intent-filter>
-			<meta-data android:name="android.service.wallpaper"
+
+			<meta-data
+				android:name="android.service.wallpaper"
 				android:resource="@xml/star" />
 		</service>
-		<activity android:label="@string/settings"
-			android:name="se.bes.starfield2.StarFieldSettings" android:theme="@android:style/Theme.Black"
-			android:exported="true">
-		</activity>
 
+		<activity
+			android:name="se.bes.starfield2.StarFieldSettings"
+			android:exported="true"
+			android:label="@string/settings"
+			android:theme="@android:style/Theme.Black" >
+		</activity>
 	</application>
 
-	<uses-sdk android:minSdkVersion="7" />
-	<uses-feature android:name="android.software.live_wallpaper" />
 </manifest>
